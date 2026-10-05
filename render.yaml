@@ -1,0 +1,21 @@
+services:
+  # FastAPI Backend Web Service
+  - type: web
+    name: stormsense-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHONPATH
+        value: .
+      - key: NOWCAST_DEVICE
+        value: cpu
+
+  # React Frontend Static Site
+  - type: web
+    name: stormsense-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
