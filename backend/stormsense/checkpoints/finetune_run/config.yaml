@@ -1,0 +1,37 @@
+amp: false
+axial_heads: 4
+base_width: 32
+batch_size: 2
+checkpoint_dir: checkpoints/finetune_run
+convlstm_hidden: 64
+convlstm_layers: 2
+crop_size: 128
+csi_thresholds:
+- 0.3
+- 0.5
+- 0.7
+early_stop_patience: 10
+epochs: 110
+era5_channels: 2
+fusion_dim: 96
+grad_accum_steps: 1
+grad_checkpoint_convlstm: false
+insat_channels: 7
+lead_time_embed_dim: 64
+lead_times:
+- 1
+- 2
+- 4
+- 8
+- 12
+lightning_channels: 1
+log_every: 1
+lr: 5.0e-05
+modality_dropout_p: 0.2
+num_workers: 0
+pos_weight: 5.0
+radar_channels: 2
+seq_len: 6
+use_axial_attention: true
+val_every: 1
+weight_decay: 0.0001

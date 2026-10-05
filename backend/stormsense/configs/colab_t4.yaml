@@ -1,0 +1,13 @@
+# Colab T4 (16GB VRAM) — bigger crops and batch since there's headroom over
+# the 4060. num_workers kept low: Colab's disk I/O and CPU count are the
+# actual bottleneck, not VRAM, once crop_size goes up.
+crop_size: 192
+batch_size: 8
+grad_accum_steps: 3
+num_workers: 2
+amp: true
+grad_checkpoint_convlstm: true
+epochs: 40
+val_every: 1
+early_stop_patience: 8
+checkpoint_dir: /content/drive/MyDrive/stormsense_checkpoints

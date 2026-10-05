@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: stormsense-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: stormsense
+      POSTGRES_USER: stormsense
+      POSTGRES_PASSWORD: stormsense
+    ports:
+      - "5432:5432"
+    volumes:
+      - stormsense_pgdata:/var/lib/postgresql/data
+
+volumes:
+  stormsense_pgdata:

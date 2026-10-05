@@ -1,0 +1,12 @@
+# RTX 4060 (8GB VRAM, laptop or desktop) — tuned to actually fit in 8GB with
+# ConvLSTM gradient checkpointing on. Effective batch = 4 x 6 = 24.
+crop_size: 128
+batch_size: 4
+grad_accum_steps: 6
+num_workers: 4
+amp: true
+grad_checkpoint_convlstm: true
+epochs: 40
+val_every: 1
+early_stop_patience: 8
+checkpoint_dir: checkpoints/rtx4060

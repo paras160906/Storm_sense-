@@ -1,0 +1,16 @@
+# RTX 4050 laptop (6GB VRAM) — tighter than the 4060 config since there's
+# 2GB less headroom, and the axial attention block adds some memory on top
+# of the ConvLSTM. Effective batch = 2 x 12 = 24, same as the 4060 config,
+# just spread over more grad-accum steps so the per-step activation memory
+# stays small enough to fit.
+crop_size: 128
+batch_size: 2
+grad_accum_steps: 12
+num_workers: 4
+amp: true
+grad_checkpoint_convlstm: true
+use_axial_attention: true
+epochs: 40
+val_every: 1
+early_stop_patience: 8
+checkpoint_dir: checkpoints/rtx4050

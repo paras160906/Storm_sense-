@@ -1,0 +1,7 @@
+{
+  "title": "StormSense",
+  "description": "StormSense disaster monitoring and alert dashboard",
+  "language": "en",
+  "robots": { "index": false },
+  "accessibility": { "addBypassLinks": true }
+}

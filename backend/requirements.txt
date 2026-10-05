@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+asyncpg
+joblib
+numpy
+python-multipart
+# Required only when NOWCAST_CHECKPOINT_PATH points to the PyTorch model.
+torch>=2.2
+pyyaml

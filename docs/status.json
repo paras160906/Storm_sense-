@@ -1,0 +1,10 @@
+{
+  "status": "Evaluation pending",
+  "training_data": "1 day (2026-08-19)",
+  "train_samples": 25,
+  "val_samples": 20,
+  "test_samples": 0,
+  "epochs_trained": 92,
+  "checkpoint": "backend/models/stormsense.pt",
+  "note": "Model is a pipeline proof-of-concept. Outputs are uncalibrated and not validated for real alerts."
+}

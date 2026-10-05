@@ -1,0 +1,9 @@
+torch>=2.2
+numpy
+scipy
+h5py
+xarray
+netCDF4
+pyyaml
+requests
+tqdm
